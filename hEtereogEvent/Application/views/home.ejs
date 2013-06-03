@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" >
+	<title >hEtereogEvent</title>
+	<!-- Bootstrap -->
+	<link href="/static/resources/css/bootstrap.min.css" rel="stylesheet" media="screen" >
+</head>
+<body>
+	<header>
+		<h2 class="offset2" ></h2>
+		<div class="navbar navbar-inverse controls controls-row offset10" >
+	        <div class="span" id="username" ><i class="icon-user" ></i> <%= username %> </div>
+	        <div class="span" >
+	        	<form id="logout" method="post" action="" >
+            		<!-- <input class="btn btn-mini" type="submit" id="bttn_logout" name="bttn_logout" value="Logout" /> -->
+        		</form>
+        	</div>
+        </div>
+	</header>
+
+	<hr />
+	<div class="container">
+		<section id="eventslist">
+			<span class="offset2" >Eventos</span>
+			<div id="events">
+			</div>
+		</section>
+		<br />
+		<hr />
+		<section id="eventform">
+			<div id="form-event" >
+				<form action="#" method="post" >
+					<div class="">
+						<label for="title">Título</label>
+						<p>
+							<input id="title" class="inputText" type="text" maxlength="64" />
+						</p>
+							<p id="titleError" class="error" style="display: none;">Por favor, introduzca un valor.</p>
+					</div>
+					<div class="">
+						<label for="location">Location</label>
+						<p>
+							<input id="location" class="inputText" type="text" placeholder="" maxlength="128" autocomplete="off" />
+						</p>
+					</div>
+					<div class="">
+						<label for="description">Descripción</label>
+						<div>
+							<textarea id="description" class="inputText" rows="10" cols="50" name="description"></textarea>
+						</div>
+						<p id="descriptionError" class="error" style="display: none;">El valor introducido supera el máximo de 512 caracteres.</p>
+					</div>
+					<div class="">
+						<input id="action" class="wizardButton submit btn btn-small btn-primary" type="button" value="" />
+					</div>
+				</form>
+			</div>
+		</section>
+	</div>
+
+	<footer class="footer" style="background-color: rgb(245, 245, 245);" >
+	<div class="container" id="cc_rights" >
+		<p class="span4 offset8" > Develop by: Javier Santiago Restrepo Moncada</p>
+		<p class="span4 offset8" ><time datetime="2013-02-18" ></time><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-sa/3.0/us/" ><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/us/80x15.png" /></a></p>
+	</div>
+	</footer>
+	<!-- <script src="http://code.jquery.com/jquery.js" ></script> -->
+	<script src="/static/resources/js/jquery-1.9.1.min.js" ></script>
+	<script src="/static/resources/js/bootstrap.min.js" ></script>
+	<script src="/static/resources/js/core.js" ></script>
+</body>
+</html>

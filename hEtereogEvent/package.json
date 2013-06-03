@@ -1,0 +1,12 @@
+{
+	"name" : "hEtereogEvent",
+	"author" : "jsantyrestrepom",
+	"description" : "Web application that uses Middleware of integration",
+	"version" : "0.0.1",
+	"dependencies" : {
+		       "express" : "3.0.0",
+		       "ejs" : "latest",
+		       "restify" : "2.5.x",
+		       "mysql" : "2.0.0-alpha8"
+	}
+}
