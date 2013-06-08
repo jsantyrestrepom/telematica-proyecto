@@ -14,7 +14,7 @@
 	}
 	
 	
-	class RegisterService {
+	class SearchService {
 		
 		function callSearchService() {
 			$response = '';

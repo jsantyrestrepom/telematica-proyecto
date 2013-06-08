@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8" >
-	<title >hEtereogEvent</title>
-	<!-- Bootstrap -->
-	<link href="/static/resources/css/bootstrap.min.css" rel="stylesheet" media="screen" >
+  <meta charset="utf-8" >
+  <title >hEtereogEvent - </title>
+  <!-- Bootstrap -->
+  <link href="/static/resources/css/bootstrap.min.css" rel="stylesheet" media="screen" >
 
 </head>
 <body>
@@ -24,7 +24,7 @@
     FB.Event.subscribe('auth.authResponseChange', function(response) {
       // Here we specify what we do with the response anytime this event occurs. 
       if (response.status === 'connected') {
-        alert('doing testing');
+        //alert('doing testing');
         testAPI();
       } else if (response.status === 'not_authorized') {
         FB.login();
@@ -46,57 +46,66 @@
   function testAPI() {
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
-      alert( response.name );
+      //$('#result').html( response.name +' '+ response.last_name);
     });
   }
 </script>
 
-	<header>
-    <h2 class="offset2" ></h2>
-    <div class="navbar navbar-inverse controls controls-row offset10" >
-          <div class="span" id="username" ><i class="icon-user" ></i> <%= username %> </div>
-          <div class="span" >
-            <form id="logout" method="post" action="" >
-                <!-- <input class="btn btn-mini" type="submit" id="bttn_logout" name="bttn_logout" value="Logout" /> -->
-            </form>
-          </div>
+  <header>
+    <div class="row" >
+      <h2 class="span8 offset2" >hEtereogEvent</h2>
+      <div class="span2 offset2 navbar navbar-inverse controls controls-row" >
+        <div id="username" ><p ><i class="icon-user" ></i> <%= username %> </p></div>
+        <div >
+          <form id="logout" method="post" action="" >
+              <!-- <input class="btn btn-mini" type="submit" id="bttn_logout" name="bttn_logout" value="Logout" /> -->
+          </form>
         </div>
+      </div>
+    </div>
   </header>
-  <br />
-	<div class="container">
+  <br /><br />
 
-  <div >
-    <!-- GOOGLE -->
-  <span id="signinButton">
-    <span
-      class="g-signin"
-      data-callback="signinCallback"
-      data-clientid="263005118239.apps.googleusercontent.com"
-      data-cookiepolicy="single_host_origin"
-      data-requestvisibleactions="http://schemas.google.com/AddActivity"
-      data-scope="https://www.googleapis.com/auth/plus.login">
-    </span>
-  </span>
+  <div class="container" style="width: 800px; height: 400px;">
 
-      <!-- FACEBOOK -->
-  <fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
-  
+    <div clas><section id="login-section row" >
+          <!-- GOOGLE -->
+      <div class="span2" >
+        <span id="signinButton">
+          <span
+            class="g-signin"
+            data-callback="signinCallback"
+            data-clientid="263005118239.apps.googleusercontent.com"
+            data-cookiepolicy="single_host_origin"
+            data-requestvisibleactions="http://schemas.google.com/AddActivity"
+            data-scope="https://www.googleapis.com/auth/plus.login">
+          </span>
+        </span>
+      </div>
+
+          <!-- FACEBOOK -->
+      <div class="span2" >
+        <fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
+      </div>
+    </section></div>
+
+    <div >
+      <span id="result" ><br /><br /></span>
+    </div>
+
   </div>
-  
-  <span id="result"></span>
 
+  <br /><br />
+  <footer class="footer" style="background-color: rgb(245, 245, 245);" >
+  <div class="container" id="cc_rights" >
+    <p class="span4 offset8" > Develop by: Javier Santiago Restrepo Moncada</p>
+    <p class="span4 offset8" ><time datetime="2013-02-18" ></time><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-sa/3.0/us/" ><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/us/80x15.png" /></a></p>
   </div>
-  <br />
-	<footer class="footer" style="background-color: rgb(245, 245, 245);" >
-	<div class="container" id="cc_rights" >
-		<p class="span4 offset8" > Develop by: Javier Santiago Restrepo Moncada</p>
-		<p class="span4 offset8" ><time datetime="2013-02-18" ></time><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-sa/3.0/us/" ><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/us/80x15.png" /></a></p>
-	</div>
-	</footer>
-	<!-- <script src="http://code.jquery.com/jquery.js" ></script> -->
-	<script src="/static/resources/js/jquery-1.9.1.min.js" ></script>
-	<script src="/static/resources/js/bootstrap.min.js" ></script>
-	<script src="/static/resources/js/core.js" ></script>
+  </footer>
+  <!-- <script src="http://code.jquery.com/jquery.js" ></script> -->
+  <script src="/static/resources/js/jquery-1.9.1.min.js" ></script>
+  <script src="/static/resources/js/bootstrap.min.js" ></script>
+  <script src="/static/resources/js/core.js" ></script>
 </body>
     <!-- GOOGLE -->
 <!-- Place this asynchronous JavaScript just before your </body> tag -->
